@@ -1,0 +1,84 @@
+.header {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background: rgba(var(--background), 0.85); /* we need to update var to rgb or use rgba directly */
+  background-color: var(--background);
+  border-bottom: 1px solid var(--light-accent);
+  z-index: 1000;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.05);
+  backdrop-filter: blur(10px);
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 1rem 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo a {
+  font-size: 1.8rem;
+  font-weight: 800;
+  color: var(--foreground);
+}
+
+.logo span {
+  color: var(--gold-primary);
+}
+
+.nav {
+  display: flex;
+}
+
+.navList {
+  display: flex;
+  list-style: none;
+  gap: 2rem;
+}
+
+.link {
+  font-size: 1.1rem;
+  font-weight: 500;
+  color: var(--foreground);
+  transition: color 0.3s ease;
+  position: relative;
+}
+
+.link:hover, .active {
+  color: var(--gold-primary);
+}
+
+.active::after {
+  content: '';
+  position: absolute;
+  bottom: -5px;
+  right: 0;
+  width: 100%;
+  height: 2px;
+  background-color: var(--gold-primary);
+  border-radius: 2px;
+}
+
+.ctaButton {
+  background-color: var(--gold-primary);
+  color: #fff;
+  padding: 0.6rem 1.4rem;
+  border-radius: 8px;
+  font-weight: bold;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  display: inline-block;
+}
+
+.ctaButton:hover {
+  background-color: var(--gold-hover);
+  transform: translateY(-2px);
+}
+
+@media (max-width: 768px) {
+  .nav, .cta {
+    display: none;
+  }
+}
