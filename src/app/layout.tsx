@@ -74,7 +74,7 @@ export default function RootLayout({
                   }
                 };
                 gtag('event', 'conversion', {
-                    'send_to': 'AW-18071421889/n9WjCKrd46UcEMGHkKlD',
+                    'send_to': 'AW-18071421889/0WwTCPmZ-aUcEMGHkKlD',
                     'value': 1.0,
                     'currency': 'SAR',
                     'event_callback': callback

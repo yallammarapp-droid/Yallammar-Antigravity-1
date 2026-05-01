@@ -10,8 +10,8 @@ export default function FloatingWhatsApp() {
       className={styles.float}
       aria-label="تواصل معنا عبر واتساب"
       onClick={() => {
-        if (typeof window !== 'undefined' && typeof (window as any).gtag !== 'undefined') {
-          (window as any).gtag('event', 'conversion', {'send_to': 'AW-18071421889/Iz6FCLCdmaIcEMGHkKlD'});
+        if (typeof window !== 'undefined' && typeof (window as any).gtag_report_conversion !== 'undefined') {
+          (window as any).gtag_report_conversion();
         }
       }}
     >
