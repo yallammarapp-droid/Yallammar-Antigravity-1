@@ -3,7 +3,11 @@ import Image from "next/image";
 import { CheckCircle } from "lucide-react";
 
 export const metadata = {
-  title: "من نحن | يلا عمار"
+  title: "من نحن | يلا عمار",
+  description: "تعرف على مؤسسة يلا عمار، الشركة الرائدة في السعودية المتخصصة في تقديم خدمات عالية الجودة في تركيب وجلي الرخام والسيراميك والبورسلين.",
+  alternates: {
+    canonical: '/about',
+  }
 };
 
 export default function AboutPage() {

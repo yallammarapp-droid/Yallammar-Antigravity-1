@@ -10,8 +10,29 @@ const tajawal = Tajawal({
 });
 
 export const metadata: Metadata = {
-  title: "يلا عمار | Yalla Ammar - خدمات الرخام والأرضيات",
-  description: "شركة يلا عمار المتخصصة في تركيب وجلي الرخام والسيراميك والبورسلين.",
+  metadataBase: new URL('https://yallammar.com'),
+  title: {
+    default: "يلا عمار | Yalla Ammar - خدمات الرخام والأرضيات",
+    template: "%s | يلا عمار"
+  },
+  description: "شركة يلا عمار المتخصصة في تركيب وجلي الرخام والسيراميك والبورسلين بأعلى جودة في السعودية.",
+  keywords: ["تركيب رخام", "جلي رخام", "سيراميك", "بورسلين", "يلا عمار", "السعودية", "جدة", "مكة", "الطائف"],
+  openGraph: {
+    title: "يلا عمار | Yalla Ammar",
+    description: "شركة يلا عمار المتخصصة في تركيب وجلي الرخام والسيراميك والبورسلين.",
+    url: 'https://yallammar.com',
+    siteName: 'Yalla Ammar',
+    locale: 'ar_SA',
+    type: 'website',
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: "يلا عمار | Yalla Ammar",
+    description: "شركة يلا عمار المتخصصة في تركيب وجلي الرخام والسيراميك والبورسلين.",
+  },
+  alternates: {
+    canonical: '/',
+  }
 };
 
 import Header from "@/components/Header";

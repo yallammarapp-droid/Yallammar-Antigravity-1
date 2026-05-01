@@ -43,7 +43,7 @@ export default function Footer() {
                 </a>
               </span>
             </li>
-            <li><Mail className={styles.icon} size={18} /> <span>info@yallaammar.com</span></li>
+            <li><Mail className={styles.icon} size={18} /> <span>info@yallammar.com</span></li>
             <li><MapPin className={styles.icon} size={18} /> <span>جدة, مكة, الطائف, الباحة, ينبع السعودية</span></li>
           </ul>
         </div>

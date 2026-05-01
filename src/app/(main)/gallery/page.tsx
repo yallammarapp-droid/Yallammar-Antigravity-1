@@ -6,7 +6,11 @@ import { ImageIcon } from "lucide-react";
 export const dynamic = 'force-dynamic';
 
 export const metadata = {
-  title: "معرض الأعمال | يلا عمار"
+  title: "معرض الأعمال | يلا عمار",
+  description: "تصفح معرض أعمالنا لخدمات جلي وتركيب الرخام والسيراميك في السعودية. شاهد قبل وبعد التنفيذ للمشاريع السكنية والتجارية.",
+  alternates: {
+    canonical: '/gallery',
+  }
 };
 
 export default async function GalleryPage() {

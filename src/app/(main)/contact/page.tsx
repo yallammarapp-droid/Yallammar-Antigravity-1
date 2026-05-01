@@ -3,6 +3,15 @@
 import { useState } from 'react';
 import styles from './page.module.css';
 import { Phone, MapPin, Mail, MessageSquare } from 'lucide-react';
+import { Metadata } from 'next';
+
+export const metadata: Metadata = {
+  title: 'تواصل معنا',
+  description: 'تواصل مع شركة يلا عمار للحصول على استشارة مجانية وعروض أسعار لخدمات جلي وتركيب الرخام والسيراميك والبورسلين.',
+  alternates: {
+    canonical: '/contact',
+  }
+};
 
 export default function ContactPage() {
   const [formData, setFormData] = useState({ name: '', phone: '', message: '' });
@@ -79,7 +88,7 @@ export default function ContactPage() {
               <div className={styles.iconWrapper}><Mail size={24} /></div>
               <div>
                 <h3>البريد الإلكتروني</h3>
-                <p>info@yallaammar.com</p>
+                <p>info@yallammar.com</p>
               </div>
             </div>
           </div>

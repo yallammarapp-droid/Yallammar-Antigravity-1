@@ -1,5 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
+import Script from "next/script";
 import styles from "./page.module.css";
 import { ArrowLeft, CheckCircle } from "lucide-react";
 import db from "@/lib/db";
@@ -10,8 +11,46 @@ export default async function Home() {
   const { data: images } = await db.from('gallery').select('*').order('created_at', { ascending: false }).limit(6);
   const homeImages = images || [];
 
+  const jsonLd = {
+    '@context': 'https://schema.org',
+    '@type': 'HomeAndConstructionBusiness',
+    name: 'يلا عمار | Yalla Ammar',
+    image: 'https://yallammar.com/hero.png',
+    description: 'شركة يلا عمار المتخصصة في تركيب وجلي الرخام والسيراميك والبورسلين بأعلى جودة في السعودية.',
+    url: 'https://yallammar.com',
+    telephone: '+966503351279',
+    address: {
+      '@type': 'PostalAddress',
+      addressLocality: 'Jeddah',
+      addressRegion: 'Makkah',
+      addressCountry: 'SA'
+    },
+    geo: {
+      '@type': 'GeoCoordinates',
+      latitude: '21.4858',
+      longitude: '39.1925'
+    },
+    openingHoursSpecification: [
+      {
+        '@type': 'OpeningHoursSpecification',
+        dayOfWeek: [
+          'Saturday', 'Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday'
+        ],
+        opens: '08:00',
+        closes: '20:00'
+      }
+    ],
+    priceRange: '$$'
+  };
+
   return (
-    <div className={styles.page}>
+    <>
+      <Script
+        id="local-business-schema"
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+      />
+      <div className={styles.page}>
       {/* Hero Section */}
       <section className={styles.hero}>
         <div className={styles.heroContent}>
@@ -92,6 +131,6 @@ export default async function Home() {
           </Link>
         </div>
       </section>
-    </div>
+    </>
   );
 }

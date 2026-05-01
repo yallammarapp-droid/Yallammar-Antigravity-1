@@ -10,6 +10,9 @@ export const dynamic = 'force-dynamic';
 export const metadata = {
   title: "خدماتنا | يلا عمار",
   description: "اكتشف خدماتنا المتكاملة في تركيب وجلي الرخام والسيراميك والبورسلين بأعلى معايير الجودة.",
+  alternates: {
+    canonical: '/services',
+  }
 };
 
 // Map icon strings to components statically for our simple setup
