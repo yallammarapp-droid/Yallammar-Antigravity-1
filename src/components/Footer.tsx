@@ -26,7 +26,22 @@ export default function Footer() {
         <div className={styles.column}>
           <h3 className={styles.title}>تواصل معنا</h3>
           <ul className={styles.contactInfo}>
-            <li><Phone className={styles.icon} size={18} /> <span dir="ltr">+966503351279</span></li>
+            <li>
+              <Phone className={styles.icon} size={18} /> 
+              <span dir="ltr">
+                <a 
+                  href="tel:966503351279"
+                  onClick={() => {
+                    if (typeof window !== 'undefined' && typeof (window as any).gtag !== 'undefined') {
+                      (window as any).gtag('event', 'conversion', {'send_to': 'AW-18071421889/Iz6FCLCdmaIcEMGHkKlD'});
+                    }
+                  }}
+                  style={{ color: 'inherit', textDecoration: 'none' }}
+                >
+                  اتصل الآن
+                </a>
+              </span>
+            </li>
             <li><Mail className={styles.icon} size={18} /> <span>info@yallaammar.com</span></li>
             <li><MapPin className={styles.icon} size={18} /> <span>جدة, مكة, الطائف, الباحة, ينبع السعودية</span></li>
           </ul>

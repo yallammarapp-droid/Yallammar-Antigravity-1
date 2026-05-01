@@ -59,7 +59,19 @@ export default function ContactPage() {
               <div className={styles.iconWrapper}><Phone size={24} /></div>
               <div>
                 <h3>رقم الهاتف / واتساب</h3>
-                <p dir="ltr">+966503351279</p>
+                <p dir="ltr">
+                  <a 
+                    href="tel:966503351279"
+                    onClick={() => {
+                      if (typeof window !== 'undefined' && typeof (window as any).gtag !== 'undefined') {
+                        (window as any).gtag('event', 'conversion', {'send_to': 'AW-18071421889/Iz6FCLCdmaIcEMGHkKlD'});
+                      }
+                    }}
+                    style={{ color: 'inherit', textDecoration: 'none' }}
+                  >
+                    اتصل الآن
+                  </a>
+                </p>
               </div>
             </div>
             <div className={styles.infoItem}>
@@ -75,8 +87,18 @@ export default function ContactPage() {
             <MessageSquare size={32} />
             <div>
               <h3>تواصل معنا عبر واتساب الآن!</h3>
-              <a href="https://wa.me/966503351279" target="_blank" rel="noopener noreferrer" className={styles.waBtn}>
-                مراسلة واتساب
+              <a 
+                href="https://wa.me/966503351279" 
+                target="_blank" 
+                rel="noopener noreferrer" 
+                className={styles.waBtn}
+                onClick={() => {
+                  if (typeof window !== 'undefined' && typeof (window as any).gtag !== 'undefined') {
+                    (window as any).gtag('event', 'conversion', {'send_to': 'AW-18071421889/Iz6FCLCdmaIcEMGHkKlD'});
+                  }
+                }}
+              >
+                تواصل واتساب
               </a>
             </div>
           </div>
