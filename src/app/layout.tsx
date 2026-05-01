@@ -41,6 +41,28 @@ export default function RootLayout({
             `,
           }}
         />
+        <Script
+          id="google-ads-call-conversion"
+          strategy="afterInteractive"
+          dangerouslySetInnerHTML={{
+            __html: `
+              window.gtag_report_conversion = function(url) {
+                var callback = function () {
+                  if (typeof(url) != 'undefined') {
+                    window.location = url;
+                  }
+                };
+                gtag('event', 'conversion', {
+                    'send_to': 'AW-18071421889/n9WjCKrd46UcEMGHkKlD',
+                    'value': 1.0,
+                    'currency': 'SAR',
+                    'event_callback': callback
+                });
+                return false;
+              };
+            `,
+          }}
+        />
       </head>
       <body>
         {children}

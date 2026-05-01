@@ -31,9 +31,10 @@ export default function Footer() {
               <span dir="ltr">
                 <a 
                   href="tel:966503351279"
-                  onClick={() => {
-                    if (typeof window !== 'undefined' && typeof (window as any).gtag !== 'undefined') {
-                      (window as any).gtag('event', 'conversion', {'send_to': 'AW-18071421889/Iz6FCLCdmaIcEMGHkKlD'});
+                  onClick={(e) => {
+                    if (typeof window !== 'undefined' && typeof (window as any).gtag_report_conversion !== 'undefined') {
+                      e.preventDefault();
+                      (window as any).gtag_report_conversion('tel:966503351279');
                     }
                   }}
                   style={{ color: 'inherit', textDecoration: 'none' }}
