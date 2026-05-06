@@ -71,10 +71,9 @@ export default function ContactPage() {
                 <p dir="ltr">
                   <a 
                     href="tel:966503351279"
-                    onClick={(e) => {
+                    onClick={() => {
                       if (typeof window !== 'undefined' && typeof (window as any).gtag_report_conversion !== 'undefined') {
-                        e.preventDefault();
-                        (window as any).gtag_report_conversion('tel:966503351279');
+                        (window as any).gtag_report_conversion();
                       }
                     }}
                     style={{ color: 'inherit', textDecoration: 'none' }}
