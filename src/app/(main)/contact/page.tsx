@@ -3,15 +3,6 @@
 import { useState } from 'react';
 import styles from './page.module.css';
 import { Phone, MapPin, Mail, MessageSquare } from 'lucide-react';
-import { Metadata } from 'next';
-
-export const metadata: Metadata = {
-  title: 'تواصل معنا',
-  description: 'تواصل مع شركة يلا عمار للحصول على استشارة مجانية وعروض أسعار لخدمات جلي وتركيب الرخام والسيراميك والبورسلين.',
-  alternates: {
-    canonical: '/contact',
-  }
-};
 
 export default function ContactPage() {
   const [formData, setFormData] = useState({ name: '', phone: '', message: '' });
