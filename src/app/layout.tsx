@@ -46,9 +46,7 @@ export default function RootLayout({
   return (
     <html lang="ar" dir="rtl" className={tajawal.variable}>
       <head>
-        <Script
-          id="google-tag-manager"
-          strategy="beforeInteractive"
+        <script
           dangerouslySetInnerHTML={{
             __html: `
               (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
