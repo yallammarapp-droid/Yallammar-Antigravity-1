@@ -95,6 +95,26 @@ export default function RootLayout({
             `,
           }}
         />
+        <Script
+          id="google-ads-whatsapp-conversion"
+          strategy="afterInteractive"
+          dangerouslySetInnerHTML={{
+            __html: `
+              window.gtag_report_whatsapp_conversion = function(url) {
+                var callback = function () {
+                  if (typeof(url) != 'undefined') {
+                    window.location = url;
+                  }
+                };
+                gtag('event', 'conversion', {
+                    'send_to': 'AW-18071421889/HSVtCI6pqKgcEMGHkKlD',
+                    'event_callback': callback
+                });
+                return false;
+              };
+            `,
+          }}
+        />
       </head>
       <body>
         <noscript>

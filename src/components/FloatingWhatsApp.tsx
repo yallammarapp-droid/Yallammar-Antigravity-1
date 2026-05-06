@@ -12,8 +12,8 @@ export default function FloatingWhatsApp() {
       className={styles.float}
       aria-label="تواصل معنا عبر واتساب"
       onClick={() => {
-        if (typeof window !== 'undefined' && typeof (window as any).gtag_report_conversion !== 'undefined') {
-          (window as any).gtag_report_conversion();
+        if (typeof window !== 'undefined' && typeof (window as any).gtag_report_whatsapp_conversion !== 'undefined') {
+          (window as any).gtag_report_whatsapp_conversion();
         }
       }}
     >

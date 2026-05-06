@@ -93,8 +93,8 @@ export default function ContactPage() {
                 rel="noopener noreferrer" 
                 className={styles.waBtn}
                 onClick={() => {
-                  if (typeof window !== 'undefined' && typeof (window as any).gtag_report_conversion !== 'undefined') {
-                    (window as any).gtag_report_conversion();
+                  if (typeof window !== 'undefined' && typeof (window as any).gtag_report_whatsapp_conversion !== 'undefined') {
+                    (window as any).gtag_report_whatsapp_conversion();
                   }
                 }}
               >
