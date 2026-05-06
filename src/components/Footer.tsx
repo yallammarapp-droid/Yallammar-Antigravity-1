@@ -39,7 +39,7 @@ export default function Footer() {
                   }}
                   style={{ color: 'inherit', textDecoration: 'none' }}
                 >
-                  اتصل الآن
+                  050 335 1279
                 </a>
               </span>
             </li>

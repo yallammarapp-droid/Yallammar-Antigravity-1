@@ -79,7 +79,7 @@ export default function ContactPage() {
                     }}
                     style={{ color: 'inherit', textDecoration: 'none' }}
                   >
-                    اتصل الآن
+                    050 335 1279
                   </a>
                 </p>
               </div>
