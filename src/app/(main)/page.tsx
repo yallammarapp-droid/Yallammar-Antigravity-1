@@ -16,7 +16,7 @@ export default async function Home() {
     '@type': 'HomeAndConstructionBusiness',
     name: 'يلا عمار | Yalla Ammar',
     image: 'https://yallammar.com/hero.png',
-    description: 'شركة يلا عمار المتخصصة في تركيب وجلي الرخام والسيراميك والبورسلين بأعلى جودة في السعودية.',
+    description: 'شركة يلا عمار المتخصصة في تركيب، جلي، وتلميع الرخام، السيراميك، والبورسلين بأعلى جودة. نقدم خدماتنا كأفضل مقاول ومعلم رخام في جدة، مكة، والطائف.',
     url: 'https://yallammar.com',
     telephone: '+966503351279',
     address: {

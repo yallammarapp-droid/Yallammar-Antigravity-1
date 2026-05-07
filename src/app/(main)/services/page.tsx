@@ -8,8 +8,8 @@ import * as Icons from "lucide-react";
 export const dynamic = 'force-dynamic';
 
 export const metadata = {
-  title: "خدماتنا | يلا عمار",
-  description: "اكتشف خدماتنا المتكاملة في تركيب وجلي الرخام والسيراميك والبورسلين بأعلى معايير الجودة.",
+  title: "خدماتنا | أفضل معلم رخام وسيراميك | يلا عمار",
+  description: "اكتشف خدماتنا المتكاملة كأفضل شركة لتركيب وجلي وتلميع الرخام والسيراميك والبورسلين. نقدم خدمات احترافية في جدة، مكة، والطائف بأسعار تنافسية.",
   alternates: {
     canonical: '/services',
   }
